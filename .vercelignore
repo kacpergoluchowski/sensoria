@@ -1,0 +1,5 @@
+.env
+.env.*
+design/
+.git/
+node_modules/

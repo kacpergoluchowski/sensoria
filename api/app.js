@@ -10,6 +10,10 @@ app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok' })
 })
 
-app.listen(port, () => {
-  console.log(`Sensoria API: http://localhost:${port}`)
-})
+if (!process.env.VERCEL) {
+  app.listen(port, () => {
+    console.log(`Sensoria API: http://localhost:${port}`)
+  })
+}
+
+export default app
