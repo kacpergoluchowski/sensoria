@@ -1,0 +1,93 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand: #10adcc;
+  --color-ink: #101b60;
+  --color-booking: #24b59d;
+  --color-booking-hover: #169c87;
+  --font-sans: 'Inter', Arial, sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  color: var(--color-ink);
+}
+
+body:has(#mobile-menu[open]) {
+  overflow: hidden;
+}
+
+.mobile-menu {
+  background:
+    radial-gradient(ellipse at 12% 18%, #bcece54d, transparent 38%),
+    radial-gradient(ellipse at 90% 32%, #efcfe44d, transparent 40%),
+    radial-gradient(ellipse at 20% 85%, #d6c5e84d, transparent 40%),
+    radial-gradient(ellipse at 80% 88%, #bcece54d, transparent 35%),
+    rgb(250 250 252 / 90%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .mobile-menu[open] {
+    animation: menu-appear 280ms ease-out both;
+  }
+
+  .mobile-menu[open]::backdrop {
+    animation: menu-appear 280ms ease-out both;
+  }
+
+  .mobile-menu[open] > div {
+    animation: menu-content-appear 350ms ease-out both;
+  }
+
+  .mobile-menu[open][data-closing] {
+    animation: menu-disappear 220ms ease-in both;
+  }
+
+  .mobile-menu[open][data-closing]::backdrop {
+    animation: menu-disappear 220ms ease-in both;
+  }
+
+  .mobile-menu[open][data-closing] > div {
+    animation: menu-content-disappear 220ms ease-in both;
+  }
+}
+
+@keyframes menu-disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes menu-content-disappear {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes menu-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menu-content-appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
