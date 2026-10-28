@@ -2,10 +2,11 @@ import logo from '../../assets/images/logo.webp'
 import { company } from '../../config/company.js'
 import { Link } from 'react-router'
 
-function Logo() {
+function Logo({ onClick }) {
   return (
     <Link
       to="/"
+      onClick={onClick}
       aria-label={`${company.name} — strona główna`}
       className="flex shrink-0 items-center justify-self-start gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
     >

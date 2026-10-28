@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
+  --spacing-page: 1.5rem;
+  --breakpoint-desktop: 72rem;
   --color-brand: #10adcc;
   --color-ink: #101b60;
   --color-booking: #24b59d;
@@ -9,8 +11,42 @@
 }
 
 body {
-  background: #f8fafc;
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+  min-height: 100svh;
+  background-color: #fffdfb;
   color: var(--color-ink);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url('../assets/images/page-background.svg');
+  background-size: 100% 100svh;
+  background-repeat: no-repeat;
+}
+
+@media (width < 72rem) {
+  body::before {
+    background-image: url('../assets/images/page-background-mobile.svg');
+    background-size: 100% auto;
+  }
+}
+
+@media (width >= 72rem) {
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 80px max(0px, calc((100% - 1440px) / 2)) 0;
+    z-index: -1;
+    pointer-events: none;
+    background: url('../assets/decorations/hero.svg') center / 100% 100%
+      no-repeat;
+  }
 }
 
 body:has(#mobile-menu[open]) {

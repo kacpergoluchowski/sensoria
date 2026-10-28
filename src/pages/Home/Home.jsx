@@ -1,5 +1,13 @@
+import Hero from './components/Hero.jsx'
+import Benefits from './components/Benefits.jsx'
+
 function Home() {
-  return <h1> home </h1>
+  return (
+    <>
+      <Hero />
+      <Benefits />
+    </>
+  )
 }
 
 export default Home

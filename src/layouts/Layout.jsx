@@ -5,7 +5,7 @@ function Layout() {
   return (
     <>
       <Header />
-      <main>
+      <main className="px-page desktop:px-0">
         <Outlet />
       </main>
     </>
