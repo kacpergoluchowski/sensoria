@@ -1,4 +1,4 @@
-import SectionHeading from '../../../layouts/ui/SectionHeading.jsx'
+import SectionHeading from '../../../shared/components/SectionHeading.jsx'
 
 function Benefits() {
   return (

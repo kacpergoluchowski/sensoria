@@ -1,7 +1,7 @@
-import Hero from './components/Hero.jsx'
+import Hero from './components/hero/Hero.jsx'
 import Benefits from './components/Benefits.jsx'
 
-function Home() {
+function HomePage() {
   return (
     <>
       <Hero />
@@ -10,4 +10,4 @@ function Home() {
   )
 }
 
-export default Home
+export default HomePage
