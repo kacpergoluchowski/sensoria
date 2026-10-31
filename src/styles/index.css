@@ -25,27 +25,16 @@ body::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image: url('../assets/images/page-background.svg');
-  background-size: 100% 100svh;
+  background-image: url('../assets/images/background.webp');
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 @media (width < 72rem) {
   body::before {
-    background-image: url('../assets/images/page-background-mobile.svg');
-    background-size: 100% auto;
-  }
-}
-
-@media (width >= 72rem) {
-  body::after {
-    content: '';
-    position: fixed;
-    inset: 80px max(0px, calc((100% - 1440px) / 2)) 0;
-    z-index: -1;
-    pointer-events: none;
-    background: url('../assets/decorations/hero.svg') center / 100% 100%
-      no-repeat;
+    background-image: url('../assets/images/background-mobile.webp');
+    background-size: cover;
+    background-position: center;
   }
 }
 

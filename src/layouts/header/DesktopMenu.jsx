@@ -1,41 +1,17 @@
-import { useEffect, useRef, useState } from 'react'
 import { Menu } from 'lucide-react'
 import { navigationLinks } from '../../config/navigation.js'
 import Button from '../ui/Button.jsx'
 import Logo from '../ui/Logo.jsx'
 import PhoneLink from '../ui/PhoneLink.jsx'
-import MobileMenu from './MobileMenu.jsx'
 
-function Header() {
-  const menuRef = useRef(null)
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const updateBackground = () => setScrolled(window.scrollY > 0)
-    updateBackground()
-    window.addEventListener('scroll', updateBackground, { passive: true })
-    return () => window.removeEventListener('scroll', updateBackground)
-  }, [])
-
+function DesktopMenu({ menuOpen, onOpenMenu }) {
   return (
-    <header
-      className={`sticky top-0 z-20 transition-colors duration-200 ${scrolled ? 'bg-white' : 'bg-transparent'}`}
-    >
-      <div className="desktop:grid-cols-[1fr_auto_1fr] desktop:px-12 mx-auto grid min-h-20 max-w-[1600px] grid-cols-[1fr_auto] items-center gap-x-4 px-page py-2">
-        <Logo />
-        <Navigation />
-        <HeaderActions />
-        <MenuToggle
-          expanded={menuOpen}
-          onClick={() => {
-            menuRef.current.showModal()
-            setMenuOpen(true)
-          }}
-        />
-      </div>
-      <MobileMenu menuRef={menuRef} onClose={() => setMenuOpen(false)} />
-    </header>
+    <div className="desktop:grid-cols-[1fr_auto_1fr] desktop:px-12 mx-auto grid min-h-20 max-w-[1600px] grid-cols-[1fr_auto] items-center gap-x-4 px-page pt-2 pb-3">
+      <Logo />
+      <Navigation />
+      <HeaderActions />
+      <MenuToggle expanded={menuOpen} onClick={onOpenMenu} />
+    </div>
   )
 }
 
@@ -83,4 +59,4 @@ function HeaderActions() {
   )
 }
 
-export default Header
+export default DesktopMenu

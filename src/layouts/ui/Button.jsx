@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router'
+import { buttonSizes, buttonVariants } from '../../config/button.js'
 
 function Button({
   children,
@@ -9,14 +10,8 @@ function Button({
   variant = 'primary',
   size = 'default',
 }) {
-  const colors =
-    variant === 'secondary'
-      ? 'border border-ink/10 bg-white text-ink shadow-sm hover:bg-slate-50'
-      : 'bg-booking text-white hover:bg-booking-hover'
-  const spacing =
-    size === 'large'
-      ? 'min-h-14 px-10 py-4 text-base'
-      : 'min-h-11 px-7 py-3 text-[14px]'
+  const colors = buttonVariants[variant] ?? buttonVariants.primary
+  const spacing = buttonSizes[size] ?? buttonSizes.default
   return (
     <Link
       to={href}

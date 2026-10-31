@@ -2,7 +2,9 @@ import Button from '../../../layouts/ui/Button.jsx'
 import Badge from '../../../layouts/ui/Badge.jsx'
 import SectionHeading from '../../../layouts/ui/SectionHeading.jsx'
 import { Heart, UserRound } from 'lucide-react'
-import heroChild from '../../../assets/images/hero-child.png'
+import heroChildSmall from '../../../assets/images/hero-child-480.webp'
+import heroChild from '../../../assets/images/hero-child-800.webp'
+import heroChildLarge from '../../../assets/images/hero-child-1200.webp'
 
 function Hero() {
   return (
@@ -78,6 +80,8 @@ function HeroImage() {
       <div className="aspect-[1.16] -rotate-3 overflow-hidden rounded-[22%_8%_18%_24%/18%_12%_10%_24%]">
         <img
           src={heroChild}
+          srcSet={`${heroChildSmall} 480w, ${heroChild} 800w, ${heroChildLarge} 1200w`}
+          sizes="(min-width: 1440px) 572px, (min-width: 1152px) calc(54vw - 75px), (min-width: 768px) calc(55vw - 44px), (min-width: 568px) 572px, calc(110vw - 53px)"
           alt="Uśmiechnięta dziewczynka na huśtawce w sali terapii integracji sensorycznej"
           width="1536"
           height="1024"
