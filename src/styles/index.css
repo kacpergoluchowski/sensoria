@@ -9,6 +9,7 @@
   --color-booking: #24b59d;
   --color-booking-hover: #169c87;
   --font-sans: 'Inter', Arial, sans-serif;
+  --font-heading: 'Nunito', Arial, sans-serif;
 }
 
 @keyframes decoration-drift {

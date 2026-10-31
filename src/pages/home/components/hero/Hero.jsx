@@ -13,7 +13,7 @@ function Hero() {
       aria-labelledby="hero-heading"
       className="relative isolate mx-auto max-w-[1440px] pt-10 pb-16 desktop:px-12 desktop:pt-26"
     >
-      <div className="grid items-start gap-12 md:grid-cols-2 md:gap-x-8 desktop:grid-cols-[1.05fr_1fr] desktop:gap-x-10 desktop:gap-y-0">
+      <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-2 md:gap-x-8 desktop:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] desktop:gap-x-10 desktop:gap-y-0">
         <div className="min-w-0 desktop:max-w-[650px]">
           <div>
             <Badge

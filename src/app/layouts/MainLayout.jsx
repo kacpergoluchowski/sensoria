@@ -7,7 +7,7 @@ function MainLayout() {
     <>
       <BackgroundDecorations />
       <Header />
-      <main className="relative z-10 px-page desktop:px-0">
+      <main className="relative z-10 overflow-x-clip px-page desktop:px-0">
         <Outlet />
       </main>
     </>

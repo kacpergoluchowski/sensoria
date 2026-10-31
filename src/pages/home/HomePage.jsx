@@ -1,5 +1,5 @@
 import Hero from './components/hero/Hero.jsx'
-import Benefits from './components/Benefits.jsx'
+import Benefits from './components/benefits/Benefits.jsx'
 
 function HomePage() {
   return (

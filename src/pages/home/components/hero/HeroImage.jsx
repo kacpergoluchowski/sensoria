@@ -7,7 +7,7 @@ function HeroImage() {
     <div className="relative isolate mx-auto w-full max-w-[520px] md:col-start-2 md:row-start-1 md:self-center desktop:col-start-2 desktop:row-span-2 desktop:row-start-1 desktop:self-start desktop:pt-2">
       <div
         aria-hidden="true"
-        className="absolute -inset-5 -z-10 rotate-6 rounded-[35%_45%_32%_40%/35%_30%_45%_40%] bg-[#def3ed]/60"
+        className="absolute inset-0 -z-10 rotate-6 rounded-[35%_45%_32%_40%/35%_30%_45%_40%] bg-[#def3ed]/60 desktop:-inset-5"
       />
       <div className="aspect-[1.16] -rotate-3 overflow-hidden rounded-[22%_8%_18%_24%/18%_12%_10%_24%]">
         <img
