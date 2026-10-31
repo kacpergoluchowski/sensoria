@@ -4,7 +4,7 @@ function Navigation() {
   return (
     <nav
       aria-label="Nawigacja główna"
-      className="desktop:flex hidden items-center gap-10 text-[15px] font-medium tracking-[0.02em] whitespace-nowrap text-ink"
+      className="header:flex hidden items-center gap-10 text-[15px] font-medium tracking-[0.02em] whitespace-nowrap text-ink"
     >
       {navigationLinks.map(({ label, href }) => (
         <a

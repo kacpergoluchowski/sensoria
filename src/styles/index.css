@@ -3,7 +3,8 @@
 @theme {
   --animate-drift: decoration-drift 10s ease-in-out infinite;
   --spacing-page: 1.5rem;
-  --breakpoint-desktop: 72rem;
+  --breakpoint-desktop: 64rem;
+  --breakpoint-header: 72rem;
   --color-brand: #10adcc;
   --color-ink: #101b60;
   --color-booking: #24b59d;
@@ -42,7 +43,7 @@ body::before {
   background-repeat: no-repeat;
 }
 
-@media (width < 72rem) {
+@media (width < 64rem) {
   body::before {
     background-image: url('../assets/images/background-mobile.webp');
     background-size: cover;

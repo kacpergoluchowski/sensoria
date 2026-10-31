@@ -9,7 +9,7 @@ function Logo({ onClick }) {
       aria-label="Sensoria — strona główna"
       className="flex min-w-0 max-w-full items-center justify-self-start gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
     >
-      <span className="relative block h-16 w-[220px] max-w-full overflow-hidden desktop:w-[260px]">
+      <span className="relative block h-16 w-[220px] max-w-full overflow-hidden header:w-[260px]">
         <img
           src={logo}
           alt=""

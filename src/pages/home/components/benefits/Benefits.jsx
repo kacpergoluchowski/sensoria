@@ -20,7 +20,7 @@ function Benefits() {
           description="Terapia integracji sensorycznej to realne wsparcie w codziennym rozwoju dziecka. Zobacz, jakie korzyści daje naszym podopiecznym."
         />
       </div>
-      <ul className="mt-6 grid auto-rows-fr grid-cols-4 items-stretch gap-3 sm:gap-4 desktop:mt-9 desktop:grid-cols-[repeat(auto-fit,minmax(min(100%,240px),1fr))] desktop:gap-6">
+      <ul className="mt-6 grid auto-rows-fr grid-cols-4 items-stretch gap-3 sm:gap-4 desktop:mt-9 desktop:grid-cols-5 desktop:gap-6">
         {benefits.map(({ id, ...benefit }) => (
           <BenefitCard key={id} {...benefit} />
         ))}

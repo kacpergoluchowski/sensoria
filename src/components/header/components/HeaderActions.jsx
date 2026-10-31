@@ -4,7 +4,7 @@ import { companyContact } from '../../../config/company.js'
 
 function HeaderActions() {
   return (
-    <div className="desktop:flex hidden items-center justify-self-end gap-6">
+    <div className="header:flex hidden items-center justify-self-end gap-6">
       <PhoneLink {...companyContact} />
       <Button href="/rezerwacja">Umów wizytę</Button>
     </div>

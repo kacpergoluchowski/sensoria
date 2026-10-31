@@ -1,7 +1,7 @@
 import Badge from '../../../../shared/components/Badge.jsx'
 import SectionHeading from '../../../../shared/components/SectionHeading.jsx'
 import { MapPin } from 'lucide-react'
-import HeadingRays from './HeadingRays.jsx'
+import HeadingRays from '../../../../shared/components/HeadingRays.jsx'
 import HeroDescription from './HeroDescription.jsx'
 import HeroActions from './HeroActions.jsx'
 import HeroImage from './HeroImage.jsx'
@@ -17,7 +17,7 @@ function Hero() {
         <div className="min-w-0 desktop:max-w-[650px]">
           <div>
             <Badge
-              className="mb-6"
+              className="mb-6 md:max-desktop:gap-2 md:max-desktop:px-3 md:max-desktop:text-xs md:max-desktop:whitespace-nowrap"
               icon={
                 <MapPin
                   size={24}
